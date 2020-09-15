@@ -1,0 +1,279 @@
+
+<?php if(isset($_POST['submit'])){
+$name = $_POST["name"];
+$phone = $_POST["phone"];
+$email = $_POST["email"];
+$message = $_POST['message'];
+$email_from='sweekruthi.0102.com';
+$subject = "Contact Form";
+$formcontent=  "From: $name \n Phone: $phone \n email: $email \n Message: $message";
+$to = "arbudha.co@gmail.com";
+
+$mailheader = "From: $email_from \r\n";
+try{
+mail($to, $subject, $formcontent, $mailheader) or die("Error!");}
+catch(exception $e){ echo $e;
+
+}
+finally{
+    echo "thank u";
+}
+header("Location: contact.html");
+
+echo "Thank You!";
+}
+else{
+    echo "b";
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ARBUDHA</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+
+  <link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.css">
+  <!-- Favicons -->
+  <link href="s.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/css/bootstrap.css">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">  
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="demo.css" rel="stylesheet">
+ <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/css/bootstrap.css">
+ <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+  <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
+</head>
+
+
+<body>
+  <!--
+	<div class="header" id="myHeader">-->
+  	<!--<div class = "top-container">
+		<h3>ARBUDHA</h3>
+  </div>-->
+			 <div class="header" id="myHeader">
+		<div class= "topnav">
+			 <a href="" class="active">ARBUDHA</a>
+      <ul>
+        <li>
+        	 <a href="#footer">Contact Us</a>
+        </li>
+        <li>
+          <a href="#services">Buy</a>
+        </li>
+        <li>
+             <a href="#services">Home</a>
+        </li>
+      </ul>
+    </div>
+</div>	
+<!--
+<section id="services" class="section-bg">
+	  <div class="row">
+      <ul class="flex-container">
+  <li class="flex-item">1</li>
+  <li class="flex-item">2</li>
+  <li class="flex-item">3</li>
+  <li class="flex-item">4</li>
+  <li class="flex-item">5</li>
+  <li class="flex-item">6</li>
+
+  <li class="flex-item">7</li>
+</ul>
+</div>
+</section>-->
+
+    <section id="services" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3></h3>
+        </header>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href="">Sameera's Creation</a></h4>
+              <p class="description"> "In difficult times, fashion is always outrageous."<br>Sameera Creation where style meets tradition<br><strong>Contact:</strong><a href=""style="color: #ff8533">Sameera's Creation</a></p></div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
+              <h4 class="title"><a href="">Access Control System</a></h4>
+              <p class="description">Access control systems restrict entrance to a property, a building, or a room to authorised persons.  <br> <br> <br></p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href="">CCTV</a></h4>
+              <p class="description">Closed-circuit television (CCTV) systems transmit video signals on a closed network. CCTV has many applications. </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #eafde7;"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
+              <h4 class="title"><a href="">Intercoms</a></h4>
+              <p class="description">Intercom systems are ideal for providing peace of mind security and deterring unwanted visitors. We offer both audio and video intercoms.  </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e1eeff;"><i class="ion-ios-world-outline" style="color: #2282ff;"></i></div>
+              <h4 class="title"><a href="">Security Alarm Monitoring</a></h4>
+              <p class="description">Security alarm monitoring gives you  peace of mind when you are away from your home or office. Connecting your security alarm to our central monitoring station (Sure Communications) means we are looking after your home and/or business assets 24 hours/day.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #ecebff;"><i class="ion-ios-clock-outline" style="color: #8660fe;"></i></div>
+              <h4 class="title"><a href="">Fire Alarm Systems</a></h4>
+              <p class="description">MaxVolte install, test and commission all Fire Alarm Systems. We also install communicators which are monitored by our partner Alarm Monitoring Centre, ensuring a rapid response from the emergency services in the event of a fire alarm activation.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+<footer id="footer" class="section-bg">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="row">
+                <div class="col-sm-6">
+                 </div>
+                <div class="col-sm-6">
+                  <div class="footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">About us</a></li>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Terms of service</a></li>
+                     <!-- <li><a href="#">Privacy policy</a></li>-->
+                    </ul>
+                  </div>
+
+                  <div class="footer-links">
+                    <h4>Contact Us</h4>
+           
+                      <strong>Phone:</strong><a href="+91 9949947727" style="color: #ff6600">+91-9949947727</a><br>
+                      <strong>Email:</strong> arbudha.co@gmail.com<br>
+                    </p>
+                  </div>
+
+  <div class="social-links">
+     <a href="https://twitter.com" class="twitter">
+     <i class="fa fa-twitter" aria-hidden="true"></i>
+    </a>
+    <a href="https://facebook.com/Sameeras-Creations-361400551271443/" class="facebook">
+      <i class="fa fa-facebook"></i>
+    </a>
+    <a href="https://instagram.com" class="instagram">
+      <i class="fa fa-instagram"></i>
+    </a>
+    	</div>
+         </div>
+       </div>
+     </div>
+  </div>
+
+          <div class="col-lg-6">
+
+            <div class="form">
+              
+                <h4>Send us a message</h4>
+                <p>Send us your queries or suggestions to serve you better.</p>
+              <form action="index.php" method="post" role="form" class="contactForm">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+                
+                <div class="form-group">
+                  <textarea class="form-control" name="phone" rows="5" id="phone" data-rule="minlen:10" data-msg="Please enter a valid phone no" placeholder="Phone No"></textarea>
+                  <div class="validation"></div>
+                </div>
+                
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" id="message" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validation"></div>
+                </div>
+            
+               <div id="sendmessage">Your message has been sent. Thank you!</div>
+                <div id="errormessage"></div>
+
+                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+              </form>
+            </div>
+
+          </div>
+</div>
+</div>
+ <div class="container">
+      	<tr><td id="note" height="24" colspan="3"><a>The Arbuda Homepage © 2020 Gama Enterprise. All rights reserved. I am not responsible for the content of external sites. Images featured on homepage are © of their respective owners.</a>
+		<div class="credits">
+        Web Site Design team lead
+        <a href="https://www.instagram.com/_sweekruthi_/">Sweekruthi.D</a>
+		<br>
+	</div>
+</td>
+</tr>
+</div>
+</footer>
+</body>
+</html>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
